@@ -8,6 +8,7 @@ class ProtocolInvitation {
         this.isOpen = false;
         this.currentTrack = 0;
         this.wasPlayingBeforeHide = false;
+        this.setupBlurAndFocus();
 
         this.playlist = [
             'assets/music/protocol.mp3',
@@ -337,6 +338,25 @@ class ProtocolInvitation {
             }
         });
     }
+    setupBlurAndFocus() {
+    // Когда окно теряет фокус 
+    window.addEventListener('blur', () => {
+        if (this.isMusicPlaying) {
+            this.music.pause();
+            this.wasPlayingBeforeHide = true;
+        }
+    });
+
+    // Когда окно снова в фокусе
+    window.addEventListener('focus', () => {
+        if (this.wasPlayingBeforeHide && this.music && this.music.paused) {
+            this.music.play().catch(() => {});
+            this.isMusicPlaying = true;
+            this.updateMusicButton();
+            this.wasPlayingBeforeHide = false;
+        }
+    });
+}
 
     setupBeforeUnload() {
         window.addEventListener('beforeunload', () => {
