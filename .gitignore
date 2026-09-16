@@ -17,6 +17,7 @@ env/
 
 # macOS
 .DS_Store
+.DB_Store
 
 # Логи
 *.log
