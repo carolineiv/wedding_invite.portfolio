@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+venv/
+.venv/
+env/
+
+# Переменные окружения и секреты
+.env
+.env.local
+*.key
+*.pem
+
+# VS Code
+.vscode/
+
+# macOS
+.DS_Store
+
+# Логи
+*.log
+
+# Временные файлы
+*.tmp
+*.bak
+
+# Базы данных
+*.sqlite3
+*.db
+
+# Кэш
+.cache/
