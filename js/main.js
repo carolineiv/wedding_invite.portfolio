@@ -171,7 +171,7 @@ class ProtocolInvitation {
                 <div class="program-item">14:30 — Сбор понятых по месту проведения</div>
                 <div class="program-item">15:00 — Оглашение протокола</div>
                 <div class="program-item">15:15 — Фотофиксация задержанной и понятых</div>
-                <div class="program-item">15:30 — Перемещение понятых к месту празднования: ГОРОД, УЛИЦА ДОМ</div>
+                <div class="program-item">15:30 — Перемещение понятых к месту празднования: ГОРОД,<br>УЛИЦА, ДОМ</div>
                 <div class="program-item">18:00 — Застолье и праздничные мероприятия</div>
             `;
         }
